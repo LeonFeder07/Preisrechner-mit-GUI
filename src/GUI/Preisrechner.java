@@ -7,11 +7,12 @@ import java.awt.event.ActionListener;
 public class Preisrechner {
     private JPanel mainpannel;
     private JLabel Preisrechner;
-    private JLabel Einzelpreis;
+    private JLabel Wort1;
     private JButton bestätigenButton;
     private JTextField Textanzahl;
-    private JTextField Texteinzelpreis;
-    private JTextField TextGesamtpreis;
+    private JTextField Wort1Text;
+    private JTextField WortEndText;
+    private JLabel WortEnd;
     private JButton minus;
     private JButton plus;
     private JButton geteilt;
@@ -20,39 +21,14 @@ public class Preisrechner {
         bestätigenButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                double einzelpreis = Double.valueOf(Texteinzelpreis.getText());
-                double anzahl= Double.valueOf(Textanzahl.getText());
-                double gesamtpreis= einzelpreis*anzahl;
-                TextGesamtpreis.setText(String.valueOf(gesamtpreis));
+                String wort = Wort1Text.getText();
+                String wortvorher = WortEndText.getText();
+                String gesamtpreis= wortvorher+wort;
+                WortEndText.setText(String.valueOf(gesamtpreis));
             }
         });
-        plus.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double einzelpreis = Double.valueOf(Texteinzelpreis.getText());
-                double anzahl= Double.valueOf(Textanzahl.getText());
-                double gesamtpreis= einzelpreis+anzahl;
-                TextGesamtpreis.setText(String.valueOf(gesamtpreis));
-            }
-        });
-        minus.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double einzelpreis = Double.valueOf(Texteinzelpreis.getText());
-                double anzahl= Double.valueOf(Textanzahl.getText());
-                double gesamtpreis= einzelpreis-anzahl;
-                TextGesamtpreis.setText(String.valueOf(gesamtpreis));
-            }
-        });
-        geteilt.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double einzelpreis = Double.valueOf(Texteinzelpreis.getText());
-                double anzahl= Double.valueOf(Textanzahl.getText());
-                double gesamtpreis= einzelpreis/anzahl;
-                TextGesamtpreis.setText(String.valueOf(gesamtpreis));
-            }
-        });
+
+
     }
 
     public static void main(String[] args) {
