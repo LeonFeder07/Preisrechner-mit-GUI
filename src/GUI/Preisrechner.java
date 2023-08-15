@@ -12,6 +12,9 @@ public class Preisrechner {
     private JTextField Textanzahl;
     private JTextField Texteinzelpreis;
     private JTextField TextGesamtpreis;
+    private JButton minus;
+    private JButton plus;
+    private JButton geteilt;
 
     public Preisrechner() {
         bestätigenButton.addActionListener(new ActionListener() {
@@ -20,6 +23,33 @@ public class Preisrechner {
                 double einzelpreis = Double.valueOf(Texteinzelpreis.getText());
                 double anzahl= Double.valueOf(Textanzahl.getText());
                 double gesamtpreis= einzelpreis*anzahl;
+                TextGesamtpreis.setText(String.valueOf(gesamtpreis));
+            }
+        });
+        plus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double einzelpreis = Double.valueOf(Texteinzelpreis.getText());
+                double anzahl= Double.valueOf(Textanzahl.getText());
+                double gesamtpreis= einzelpreis+anzahl;
+                TextGesamtpreis.setText(String.valueOf(gesamtpreis));
+            }
+        });
+        minus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double einzelpreis = Double.valueOf(Texteinzelpreis.getText());
+                double anzahl= Double.valueOf(Textanzahl.getText());
+                double gesamtpreis= einzelpreis-anzahl;
+                TextGesamtpreis.setText(String.valueOf(gesamtpreis));
+            }
+        });
+        geteilt.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double einzelpreis = Double.valueOf(Texteinzelpreis.getText());
+                double anzahl= Double.valueOf(Textanzahl.getText());
+                double gesamtpreis= einzelpreis/anzahl;
                 TextGesamtpreis.setText(String.valueOf(gesamtpreis));
             }
         });
