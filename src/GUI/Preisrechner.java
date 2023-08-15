@@ -30,11 +30,10 @@ public class Preisrechner {
             }
         });
 
-
         plus.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(null == ersteZahl){
+                if(null== ersteZahl){
                     ersteZahl=Double.valueOf(Eingabefeld.getText());
                 };
             }
