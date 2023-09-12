@@ -16,12 +16,24 @@ public class Preisrechner {
     private JButton plus;
     private JButton geteilt;
     private JButton eingabenLöschenButton;
+    private JButton a2Button;
+    private JButton a3Button;
+    private JButton a1Button;
+    private JButton a4Button;
+    private JButton a5Button;
+    private JButton a6Button;
+    private JButton a9Button;
+    private JButton a8Button;
+    private JButton a7Button;
+    private JButton a0Button;
+    private JButton buttonPunkt;
 
     public Preisrechner() {
         final double[] ersteZahl = {0};
         final boolean[] ersteZahlvoll = {false};
          ersteZahlvoll[0]=false;
         final double[] zweiteZahl = {0};
+
 
         final int[] zeichen = {0};
         zeichen[0]=7;
@@ -132,6 +144,94 @@ public class Preisrechner {
                 zeichen[0]=7;
                 Eingabefeld.setText("");
 
+            }
+        });
+        a1Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inhalt=Eingabefeld.getText();
+
+                Eingabefeld.setText(inhalt+ "1");
+            }
+        });
+        a2Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inhalt=Eingabefeld.getText();
+
+                Eingabefeld.setText(inhalt+ "2");
+            }
+        });
+        a3Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inhalt=Eingabefeld.getText();
+
+                Eingabefeld.setText(inhalt+ "3");
+            }
+        });
+        a6Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inhalt=Eingabefeld.getText();
+
+                Eingabefeld.setText(inhalt+ "6");
+            }
+        });
+        a5Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inhalt=Eingabefeld.getText();
+
+                Eingabefeld.setText(inhalt+ "5");
+            }
+        });
+        a4Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inhalt=Eingabefeld.getText();
+
+                Eingabefeld.setText(inhalt+ "4");
+            }
+        });
+        a9Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inhalt=Eingabefeld.getText();
+
+                Eingabefeld.setText(inhalt+ "9");
+            }
+        });
+        a8Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inhalt=Eingabefeld.getText();
+
+                Eingabefeld.setText(inhalt+ "8");
+            }
+        });
+        a7Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inhalt=Eingabefeld.getText();
+
+                Eingabefeld.setText(inhalt+ "7");
+            }
+        });
+        a0Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inhalt=Eingabefeld.getText();
+
+                Eingabefeld.setText(inhalt+ "0");
+            }
+        });
+        buttonPunkt.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inhalt=Eingabefeld.getText();
+
+                Eingabefeld.setText(inhalt+ ".");
             }
         });
     }
